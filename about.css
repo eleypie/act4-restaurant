@@ -1,71 +1,86 @@
+
+:root {
+    --primary-green: #3a5a40;
+    --secondary-green: #588157;
+    --light-green: #a3b18a;
+    --cream: #f8f9fa;
+    --dark-text: #2b2d42;
+    --accent: #e9c46a;
+}
+
 body {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    background-color: #FEFEFE !important;
+    font-family:  'Montserrat', sans-serif;
+    color: var(--dark-text);
+    background-color: var(--cream);
+    line-height: 1.6;
+    background-image: url(img/home/texture2.png);
 }
 
-/* nav bar design */
-
-nav{
-    background-color: #FFF !important;
+h1, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
 }
-nav li a{
-    color: black !important; 
+
+h2 {
+    ont-family: 'Montserrat', sans-serif; 
+}
+
+.navbar {
+    background-color: white;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    padding: 1rem 2rem;
+}
+
+.brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--primary-green);
+    letter-spacing: 1px;
+}
+
+.sub-brand {
     font-size: 1rem;
-
+    color: var(--secondary-green);
+    margin-top: -0.5rem;
 }
 
-.nav-link:hover {
-    color: #00660C !important; 
-}
-.nav-link {
+.nav-menu-item .nav-link {
+    color: var(--primary-green);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
     position: relative;
-    letter-spacing: 0.5px;
-    padding: 0 10px;
 }
 
-.nav-link::after {
-    content: "";
+.nav-menu-item .nav-link:hover {
+    color: var(--secondary-green);
+}
+
+.nav-menu-item .nav-link::after {
+    content: '';
     position: absolute;
-    background-color: rgb(27, 25, 25);
-    height: 3px;
-    width: 0%;
+    width: 0;
+    height: 2px;
+    bottom: 0;
     left: 0;
-    bottom: -2px;
-    transition: 0.3s;
+    background-color: var(--light-green);
+    transition: width 0.3s ease;
 }
 
-.nav-link:hover::after {
+.nav-menu-item .nav-link:hover::after {
     width: 100%;
 }
 
-nav .brand{
-    font-family: 'Playfair Display'; 
-    font-size: 2rem; 
-    color: #00660C !important; 
-    font-weight: bold;
+.title-style {
+    color: var(--cream);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background-color: var(--primary-green);;
+    text-align: center;
+    padding-bottom: 3px;
 }
-
-nav .brand:hover{
-    color: #2d7836 !important; 
-    text-decoration: none;
-}
-
-nav .sub-brand {
-    font-family: 'Playfair Display'; 
-    font-size: 1rem; 
-    margin: 0;
-    padding: 0;
-    color: #7CAF8D !important; 
-}
-
-nav .sub-brand:hover{
-    color: #2d7836 !important; 
-    text-decoration: none;
-} 
-
-/* about section desing  */ 
 
 .line {
     width: 8%;
@@ -78,7 +93,7 @@ nav .sub-brand:hover{
 .about-history {
     background-color: #F8F8F8;
     width: 50%;
-    /* border: 1px solid #00660C; */
+    padding: 1rem;
 }
 
 .about-history p {
@@ -91,7 +106,6 @@ nav .sub-brand:hover{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    /* border: 1px solid #00660C; */
     width: 100%;
 }
 
@@ -125,8 +139,6 @@ nav .sub-brand:hover{
     grid-column: span 1;
     grid-row: span 1;
 }
-
-/* people behind experience  */
 
 .staff-img {
     width: 15%;
@@ -171,83 +183,130 @@ nav .sub-brand:hover{
 
 /* values */
 
-.values-icon {
-    width: 15%;
-    height: 15%;
-    object-fit: cover;
+.about-section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
 }
 
 .values-card {
+    background: #fff;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    width: 80%;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    padding: 1rem;
-    border: none !important;
-    font-family: 'Inter';
-    border-radius: 20px !important;
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.values-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.values-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
 }
 
 .values-title {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: #00660C;
-    font-weight: light;
-    margin: 1rem 0;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
 }
 
 .values-description {
-    text-align: center;
-    width: 70%;
-    padding: 0.5rem 0; 
-    font-size: 0.8rem;
+    font-size: 1rem;
+    color: #555;
+    max-width: 85%;
 }
 
 /* footer design */
 
 footer {
-    background-color: #2B3237 !important;
-    padding: 3rem 2rem;
+    background-color: var(--primary-green);
+    color: white;
+    padding: 3rem 0 1rem;
 }
 
-.company-about {
-    width: 40%;
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding: 0 2rem;
 }
 
-.contact-info {
-    width: 40%;
+.footer-section {
+    flex: 1;
+    min-width: 300px;
+    margin-bottom: 2rem;
     padding: 0 1rem;
-    margin-left: -1rem;
 }
 
-.opening-hours{
-    font-size: small;
-    width: 80%;
-    padding: 0;
-    /* border: 1px solid #00660C; */
+.footer-section h4 {
+    color: white;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    position: relative;
+    padding-bottom: 0.5rem;
 }
 
-.schedule {
-    width: 30%;
-    /* border: 1px solid #00660C; */
-    padding-right: -2rem;
+.footer-section h4::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--light-green);
 }
 
-footer h4 {
-    color: #FFF;
-    font-family: 'Playfair Display';
-    margin-bottom: 1rem;
+.footer-section p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
 }
 
-
-footer p {
-    color: #F5F5F5;
-    font-family: 'Inter';
+.footer-section img {
+    width: 16px;
+    height: 16px;
+    margin-right: 0.5rem;
 }
 
-.hover-card-values:hover, .hover-card-staff:hover {
-    transform: scale(1.05);
-    transition: 0.3s;
+.opening-hours {
+    display: flex;
+}
+
+.closed p:first-child {
+    color: #ff6b6b;
+}
+
+hr {
+    border-color: rgba(255,255,255,0.1);
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+@media (max-width: 768px) {
+    .navbar-brand {
+        margin-right: 0;
+    }
+    
+    .hero-image img {
+        max-width: 90%;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+    }
+    
+    .footer-section {
+        min-width: 100%;
+    }
 }

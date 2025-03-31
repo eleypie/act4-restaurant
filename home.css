@@ -20,10 +20,6 @@ h1, h2, h3, h4 {
     font-weight: 700;
 }
 
-header {
-    background-image: url(img/home/texture2.png);
-    background-size: cover;
-}
 .navbar {
     background-color: white;
     box-shadow: 0 2px 15px rgba(0,0,0,0.1);
@@ -204,7 +200,7 @@ font-size: 1rem;
 }
 
 .name span {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.3rem;
     color: var(--primary-green);
     font-weight: 700;
@@ -332,6 +328,7 @@ font-size: 1rem;
 }
 
 .contact-card h3 {
+    font-family: 'Montserrat', sans-serif;
     color: var(--primary-green);
     margin-bottom: 1rem;
 }
