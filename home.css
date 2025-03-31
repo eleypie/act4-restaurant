@@ -76,6 +76,40 @@ height: 80vh;
 min-height: 500px;
 }
 
+#restaurantCarousel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-inner {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 95vh; 
+    object-fit: cover;
+}
+
+.hero-content {
+    position: absolute;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    width: 100%;
+    max-width: 1300px;
+    background-color: rgba(29, 116, 29, 0.7);
+    padding: 10px;
+    border-radius: 0;
+}
+
+.hero-content h2 {
+    font-size: 3rem; 
+    line-height: 1.2; 
+}
+
 .carousel-inner, .carousel-item {
 height: 100%;
 }
@@ -246,9 +280,13 @@ font-size: 1rem;
     color: white;
 }
 
-.about-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+.about-section img {
+    width: 400%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin-right: -65%;
+    object-fit: cover;
 }
 
 .about-line {
@@ -313,12 +351,35 @@ font-size: 1rem;
     line-height: 2rem;
 }
 
-.book-btn {
-    text-decoration: none !important;
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+    font-family: 'Inter', sans-serif;
+    border: none !important;
+    background-color: white !important;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    min-height: 350px;
+    flex-grow: 1;
 }
-.contact-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+
+.contact-card img {
+    margin-top: 10%;
+}
+
+.contact-card h3 {
+    margin-top: 8%;
+}
+
+.contact-card p {
+    flex-grow: 1;
+    margin-top: 5%;
+    font-size: 15px;
 }
 
 .contact-card img {
@@ -343,13 +404,30 @@ font-size: 1rem;
     transition: all 0.3s ease;
     text-decoration: none;
     display: inline-block;
-    margin-top: 1rem;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.book-btn a, 
+.book-btn a:visited, 
+.book-btn a:hover, 
+.book-btn a:active, 
+.book-btn a:focus {
+    font-family: 'Montserrat', sans-serif;
+    color: white !important; 
+    text-decoration: none !important;
+    font-weight: bold;
+    display: inline-block; 
 }
 
 .book-btn:hover {
-    background-color: var(--secondary-green);
-    transform: translateY(-3px);
-    color: white;
+    transform: scale(1.10);
+}
+
+@media (max-width: 768px) {
+    .col-md-4 {
+        width: 100%; 
+    }
 }
 
 footer {
@@ -403,34 +481,13 @@ footer {
     margin-right: 0.5rem;
 }
 
-.opening-hours {
-    display: flex;
+
+footer p {
+    color: #F5F5F5;
+    font-family: 'Inter';
 }
 
-.closed p:first-child {
-    color: #ff6b6b;
-}
-
-hr {
-    border-color: rgba(255,255,255,0.1);
-    margin: 2rem auto;
-    max-width: 1200px;
-}
-
-@media (max-width: 768px) {
-    .navbar-brand {
-        margin-right: 0;
-    }
-    
-    .hero-image img {
-        max-width: 90%;
-    }
-    
-    .footer-container {
-        flex-direction: column;
-    }
-    
-    .footer-section {
-        min-width: 100%;
-    }
+.hover-card-values:hover, .hover-card-staff:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
 }
