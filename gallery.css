@@ -88,6 +88,7 @@ h1, h2, h3, h4 {
     margin-bottom: 1rem;
     background-color: var(--primary-green);;
     text-align: center;
+    padding-bottom: 3px;
 }
 
 .title-line {
