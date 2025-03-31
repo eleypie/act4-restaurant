@@ -1,77 +1,70 @@
+
+:root {
+    --primary-green: #3a5a40;
+    --secondary-green: #588157;
+    --light-green: #a3b18a;
+    --cream: #f8f9fa;
+    --dark-text: #2b2d42;
+    --accent: #e9c46a;
+}
+
 body {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    background-color: #FEFEFE !important;
+    font-family:  'Montserrat', sans-serif;
+    color: var(--dark-text);
+    background-color: var(--cream);
+    line-height: 1.6;
 }
 
-/* nav bar design */
-
-nav{
-    background-color: #FFF !important;
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
 }
-nav li a{
-    color: black !important; 
+
+.navbar {
+    background-color: white;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    padding: 1rem 2rem;
+}
+
+.brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--primary-green);
+    letter-spacing: 1px;
+}
+
+.sub-brand {
     font-size: 1rem;
-
+    color: var(--secondary-green);
+    margin-top: -0.5rem;
 }
 
-.nav-link:hover {
-    color: #00660C !important; 
-}
-.nav-link {
+.nav-menu-item .nav-link {
+    color: var(--primary-green);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
     position: relative;
-    letter-spacing: 0.5px;
-    padding: 0 10px;
 }
 
-.nav-link::after {
-    content: "";
+.nav-menu-item .nav-link:hover {
+    color: var(--secondary-green);
+}
+
+.nav-menu-item .nav-link::after {
+    content: '';
     position: absolute;
-    background-color: rgb(27, 25, 25);
-    height: 3px;
-    width: 0%;
+    width: 0;
+    height: 2px;
+    bottom: 0;
     left: 0;
-    bottom: -2px;
-    transition: 0.3s;
+    background-color: var(--light-green);
+    transition: width 0.3s ease;
 }
 
-.nav-link:hover::after {
+.nav-menu-item .nav-link:hover::after {
     width: 100%;
-}
-
-nav .brand{
-    font-family: 'Playfair Display'; 
-    font-size: 2rem; 
-    color: #00660C !important; 
-    font-weight: bold;
-}
-
-nav .brand:hover{
-    color: #2d7836 !important; 
-    text-decoration: none;
-}
-
-nav .sub-brand {
-    font-family: 'Playfair Display'; 
-    font-size: 1rem; 
-    margin: 0;
-    padding: 0;
-    color: #7CAF8D !important; 
-}
-
-nav .sub-brand:hover{
-    color: #2d7836 !important; 
-    text-decoration: none;
-} 
-
-/* menu section  */
-.line {
-    width: 8%;
-    background-color: #00660C;
-    height: 0.5vh;
-    margin: 0 auto;
-    border-radius: 10px;
 }
 
 .menu-food-image{
