@@ -14,38 +14,90 @@
 </head>
 <body>
     <main>
-        <header>
-            <nav class="nav-menu navbar navbar-expand-lg navbar-light ">
-                <div class="container-fluid d-flex justify-content-center align-items-start flex-column">
-                    <a class="navbar-brand text-center h1 brand" href="home.html">BotaniQ</a>
-                    <p class="navbar-brand sub-brand" style="font-family: 'Playfair Display';">A FRESH TAKE ON VEGAN DINING</p>
+    <header class>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid d-flex justify-content-center align-items-start flex-column">
+                <a class="navbar-brand text-center h1 brand" href="home.html">BotaniQ</a>
+                <p class="navbar-brand sub-brand">A FRESH TAKE ON VEGAN DINING</p>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-menu-item nav-item mx-3"><a class="nav-link" href="home.html">HOME</a></li>
+                    <li class="nav-menu-item nav-item mx-3"><a class="nav-link" href="menu.html">MENU</a></li>
+                    <li class="nav-menu-item nav-item mx-3"><a class="nav-link" href="gallery.html">GALLERY</a></li>
+                    <li class="nav-menu-item nav-item mx-3"><a class="nav-link" href="about.html">ABOUT</a></li>
+                    <li class="nav-menu-item nav-item mx-3"><a class="nav-link" href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+        
+        <div class="container gallery-container py-5">
+            <h1 class="text-center playfair-display mb-4">Gallery</h1>
+            <div class="title-line"></div>
+            <div class="line mx-auto mb-5"></div>
+            
+            <div class="row g-4">
+              <!-- First Row -->
+              <div class="col-md">
+                <div class="gallery-item">
+                  <img id="img1-barista" src="img/gallery/barista.png" 
+                       class="img-fluid" 
+                       alt="The barista mixing drinks in his station">
+                  <div class="gallery-caption">Artisan Beverages</div>
                 </div>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mr-auto d-flex justify-content-start align-items-center flex-row" style="font-family: 'Playfair Display';">
-                        <li class="nav-menu-item nav-item mx-4"><a class="nav-link" href="home.html">HOME</a></li>
-                        <li class="nav-menu-item nav-item mx-4"><a class="nav-link" href="menu.html">MENU</a></li>
-                        <li class="nav-menu-item nav-item mx-4"><a class="nav-link" href="gallery.html">GALLERY</a></li>
-                        <li class="nav-menu-item nav-item mx-4"><a class="nav-link" href="about.html">ABOUT</a></li>
-                        <li class="nav-menu-item nav-item mx-4"><a class="nav-link" href="contact.html">CONTACT</a></li>
-                    </ul>
+              </div>
+              <div class="col-md-6">
+                <div class="gallery-item featured">
+                  <img id="img2-customerv2" src="img/gallery/customerv2.png"
+                       class="img-fluid"
+                       alt="Customers eating a salad">
+                  <div class="gallery-caption">Fresh Garden Salads</div>
                 </div>
-            </nav>
-        </header>
-        <h1 class="text-center" style="font-family: 'Playfair Display';">Gallery</h1>
-        <div class="line"></div>
-        <div class="gallery">
-            <img id="img1-barista" src="img/gallery/barista.png" alt="">
-            <img id="img2-customerv2" src="img/gallery/costumerv2.png" alt="">
-            <img id="img3-juice" src="img/gallery/juice order.png" alt="">
-            <img id="img4-table" src="img/gallery/table.png" alt="">
-            <img id="img5-flour" src="img/gallery/flour.png" alt="">
-            <img id="img6-pizza" src="img/gallery/eating pizza.png" alt="">
-            <img id="img7-customer" src="img/gallery/costumerv2.png" alt="">
-        </div>
-    </main>
+              </div>
+              <div class="col-md">
+                <div class="gallery-item">
+                  <img id="img3-juice" src="img/gallery/juice order.png"
+                       class="img-fluid"
+                       alt="A customer mixing a juice using their straw">
+                  <div class="gallery-caption">Cold-Pressed Juices</div>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Second Row -->
+            <div class="row g-4 mt-4">
+              <div class="col-md">
+                <div class="gallery-item">
+                  <img id="img4-table" src="img/gallery/table.png"
+                       class="img-fluid"
+                       alt="A table for four in the restaurant">
+                  <div class="gallery-caption">Elegant Dining</div>
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="gallery-item featured">
+                  <img id="img5-flour" src="img/gallery/flour.png"
+                       class="img-fluid"
+                       alt="Kitchen staff sifting flour">
+                  <div class="gallery-caption">Artisan Baking</div>
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="gallery-item">
+                  <img id="img6-pizza" src="img/gallery/eating pizza.png"
+                       class="img-fluid"
+                       alt="Customers dining with a pizza, salad, and bread">
+                  <div class="gallery-caption">Wood-Fired Pizza</div>
+                </div>
+              </div>
+            </div>
+          </div>
+</main>
+    
     <footer class="mt-5">
         <div class="footer-container d-flex justify-content-center align-items-start flex-row">
             <div class="footer-section company-about">
